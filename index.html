@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <title>Sector 7 - Netwiz</title>
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px|Lato:400,300' rel='stylesheet' type='text/css'>
+    <head>
+    <link rel="stylesheet" href="dependancies/css/styles.css">
+    <link rel="stylesheet" href="dependancies/css/hover.css">
+    <link rel="stylesheet" href="dependancies/css/jvfloat.css">
+    <script type="text/javascript" src="dependancies/js/lol.js"></script>
+    <script src="dependancies/js/jquery-1.11.3.min.js"></script>
+    <script src="dependancies/js/jvfloat.js"></script>  
+    
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59161675-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </head>
+    <script type="text/javascript">generateIP();</script>
+    <body onLoad='generateIP();'>
+        
+                
+        
+        
+        <div class="bg" style="text-align:center;width:300px;height:330px;color:white;padding-top:6px; margin:7px auto;" class='centre'>
+                <p id="txt" style="font-size:1.5em;width:300;height:10px;" class="thala">IPv4 Addressing Practice</p>
+            <button type="submit" onclick="window.location.href='#popup1'" style="float:right" class='hvr-glow'>?</button><br>
+                <label>IPv4 Address</label>
+                <br>
+                <input id="IPAddress" type="text" placeholder="IP Address" disabled><br><br>
+            <div style="width:310px;height:138px">
+                <div class='' id='bdy'>
+                    <input id="SubnetMask" type="text" placeholder="Subnet Mask - Octet Form" class="testBox inp"></input>
+                <br><br>
+                    <input id="NetworkIP" type="text" placeholder="Network Address" class="testBox inp"></input>
+                <br><br>
+                    <input id="BroadcastIP" type="text" placeholder="Broadcast Address" class="testBox inp"></input>
+                <br><br>
+                    <input id="DefaultGateway" type="text" placeholder="Default Gateway" class="testBox inp"></input>
+                <br>
+                </div>
+                <div class='sidebar' id='Ans'>
+                    <label id="SubnetMaskAns"></label><br><br>
+                    <label id="NetworkIPAns"></label><br><br>
+                    <label id="BroadcastIPAns"></label><br><br>
+                    <label id="DefaultGatewayAns"></label><br>
+                </div>
+</div>
+                <br>
+                <div style='width:300px;float:left;padding-top:10px'>
+                <button type="input" id="check" onclick="checkIP()" class='hvr-fade'>Check</button>
+                <button type="input" id="next" onclick="showAnswers()" class='hvr-fade'>Answers</button>
+                <button type="input" id="next" onclick="generateIP()" class='hvr-fade'>Next one!</button><br>
+                </div><br>
+                <label id="author" style="float:left">RM</label>
+                <label id="version" style="float:right">v1.0</label>
+        </div>
+
+
+    </body>
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>What is this?</h2>
+		<a class="close" href="#">×</a>
+		<div class="content">
+			This IPv4 Address Practice tool spits out random IP Addresses along with its corresponding Subnet Mask in CIDR Notation. You're job my friend, is to compute the Subnet Mask, Network Address, Default Gateway and Broadcast Address and key it into the fields!<br><b>Check</b> - Checks whether your input is correct/incorrect.<br><b>Answers</b> - Shows the Answer.<br><b>Next One</b> - Spits out the next IP Address!<br>
+            <br> <i>*This tool is in beta phase, in case you experience any bugs/errors or have any suggestions/feedback, please forward it to ranjanmo(at)buffalo.edu</i> 
+		</div>
+	</div>
+</div>
+    <script>
+        $('input, textarea').jvFloat();
+    </script>
+
+</html>
